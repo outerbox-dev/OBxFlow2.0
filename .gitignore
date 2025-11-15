@@ -1,0 +1,66 @@
+# Security - NEVER commit credentials
+.ai/05-CREDENTIALS.md
+*.env
+.env.local
+.env.*.local
+.env.production
+*.key
+*.pem
+secrets/
+credentials/
+
+# N8N Data
+n8n/data/
+n8n/.env
+n8n/logs/*.log
+n8n/backups/*.sql
+n8n/backups/*.tar.gz
+n8n/backups/backup_*
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# N8N
+.n8n/
+*.db
+*.sqlite
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*.backup
+*.bak
+
+# OS
+Thumbs.db
