@@ -1,0 +1,362 @@
+/* ==========================================
+   OBxFlow Custom Branding Styles
+   Based on OuterBox Brand Standards 2025
+   ========================================== */
+
+:root {
+  /* OuterBox Brand Colors */
+  --color-obx-dark-blue: #17212E;
+  --color-obx-blue: #1D4E89;
+  --color-obx-frost: #EEF3F6;
+  --color-obx-white: #FFFFFF;
+  --color-obx-orange: #C75300;
+  --color-obx-gold: #FFB703;
+  --color-obx-deep-blue: #033F63;
+  --color-obx-grey: #747D85;
+  --color-obx-slate: #5C6C80;
+  --color-obx-glacier: #F7F9FB;
+  --color-obx-bright-blue: #0066DC;
+  --color-obx-sunset: #F29112;
+  
+  /* Override N8N Primary Colors */
+  --color-primary: var(--color-obx-blue);
+  --color-primary-shade-1: var(--color-obx-deep-blue);
+  --color-primary-shade-2: var(--color-obx-dark-blue);
+  --color-primary-tint-1: #4A7AB5;
+  --color-primary-tint-2: #8BABD3;
+  
+  /* Background Colors */
+  --color-background-dark: var(--color-obx-dark-blue);
+  --color-background-base: var(--color-obx-white);
+  --color-background-light: var(--color-obx-frost);
+  --color-background-lighter: var(--color-obx-glacier);
+  --color-background-xlight: var(--color-obx-white);
+  
+  /* Text Colors */
+  --color-text-dark: var(--color-obx-dark-blue);
+  --color-text-base: var(--color-obx-dark-blue);
+  --color-text-light: var(--color-obx-slate);
+  --color-text-lighter: var(--color-obx-grey);
+  
+  /* Interactive Elements */
+  --color-secondary: var(--color-obx-orange);
+  --color-secondary-tint-1: var(--color-obx-sunset);
+  --color-secondary-shade-1: #A64600;
+  
+  /* Success, Warning, Danger */
+  --color-success: #4AA17B;
+  --color-success-tint-1: #97CDBA;
+  --color-success-shade-1: #178262;
+  
+  --color-warning: var(--color-obx-gold);
+  --color-warning-tint-1: #FFCB4D;
+  --color-warning-shade-1: #E59F00;
+  
+  --color-danger: #D95F55;
+  --color-danger-tint-1: #ED9180;
+  --color-danger-shade-1: #A72F3B;
+}
+
+/* Typography - Use Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body, 
+.n8n-app,
+* {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-obx-dark-blue);
+  font-weight: 900;
+}
+
+h1 { font-size: 22px; }
+h2 { font-size: 18px; }
+h3 { font-size: 14px; font-weight: 700; }
+
+/* Main Header Bar */
+.main-header {
+  background-color: var(--color-obx-dark-blue) !important;
+  border-bottom: 2px solid var(--color-obx-blue);
+}
+
+/* Logo Container */
+.n8n-logo {
+  display: none !important;
+}
+
+.main-header::before {
+  content: 'OBxFlow';
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-obx-white);
+  letter-spacing: -0.5px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+/* Sidebar */
+.menu-sidebar {
+  background-color: var(--color-obx-frost) !important;
+  border-right: 1px solid var(--color-obx-glacier);
+}
+
+.menu-item {
+  color: var(--color-obx-dark-blue) !important;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background-color: var(--color-obx-white) !important;
+  color: var(--color-obx-blue) !important;
+  border-left: 3px solid var(--color-obx-orange);
+}
+
+/* Buttons */
+.n8n-button,
+.el-button {
+  font-weight: 500;
+  text-transform: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.n8n-button--primary,
+.el-button--primary {
+  background-color: var(--color-obx-blue) !important;
+  border-color: var(--color-obx-blue) !important;
+  color: var(--color-obx-white) !important;
+}
+
+.n8n-button--primary:hover,
+.el-button--primary:hover {
+  background-color: var(--color-obx-deep-blue) !important;
+  border-color: var(--color-obx-deep-blue) !important;
+}
+
+.n8n-button--secondary,
+.el-button--default {
+  background-color: var(--color-obx-white) !important;
+  border: 2px solid var(--color-obx-blue) !important;
+  color: var(--color-obx-blue) !important;
+}
+
+.n8n-button--secondary:hover,
+.el-button--default:hover {
+  background-color: var(--color-obx-frost) !important;
+}
+
+/* Success Button */
+.el-button--success {
+  background-color: var(--color-obx-orange) !important;
+  border-color: var(--color-obx-orange) !important;
+}
+
+.el-button--success:hover {
+  background-color: var(--color-obx-sunset) !important;
+  border-color: var(--color-obx-sunset) !important;
+}
+
+/* Workflow Canvas */
+.workflow-canvas {
+  background-color: var(--color-obx-glacier) !important;
+  background-image: 
+    linear-gradient(var(--color-obx-frost) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-obx-frost) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Node Elements */
+.node-wrapper {
+  border: 2px solid var(--color-obx-blue) !important;
+  border-radius: 8px;
+  background-color: var(--color-obx-white) !important;
+  box-shadow: 0 2px 4px rgba(23, 33, 46, 0.1);
+}
+
+.node-wrapper:hover {
+  border-color: var(--color-obx-orange) !important;
+  box-shadow: 0 4px 8px rgba(199, 83, 0, 0.2);
+}
+
+.node-wrapper.selected {
+  border-color: var(--color-obx-gold) !important;
+  border-width: 3px;
+}
+
+/* Connection Lines */
+.connection-line {
+  stroke: var(--color-obx-blue) !important;
+  stroke-width: 2px;
+}
+
+.connection-line.active {
+  stroke: var(--color-obx-orange) !important;
+  stroke-width: 3px;
+}
+
+/* Input Fields */
+.el-input__inner,
+.el-textarea__inner {
+  border: 1px solid var(--color-obx-frost) !important;
+  background-color: var(--color-obx-white) !important;
+  color: var(--color-obx-dark-blue) !important;
+}
+
+.el-input__inner:focus,
+.el-textarea__inner:focus {
+  border-color: var(--color-obx-blue) !important;
+  box-shadow: 0 0 0 2px rgba(29, 78, 137, 0.2);
+}
+
+/* Tags and Badges */
+.el-tag {
+  background-color: var(--color-obx-frost) !important;
+  color: var(--color-obx-dark-blue) !important;
+  border: 1px solid var(--color-obx-blue) !important;
+}
+
+.el-tag--success {
+  background-color: var(--color-obx-gold) !important;
+  color: var(--color-obx-dark-blue) !important;
+  border-color: var(--color-obx-sunset) !important;
+}
+
+.el-tag--danger {
+  background-color: #ED9180 !important;
+  color: var(--color-obx-dark-blue) !important;
+  border-color: #D95F55 !important;
+}
+
+/* Notifications */
+.el-notification {
+  border-left: 4px solid var(--color-obx-blue) !important;
+  background-color: var(--color-obx-white) !important;
+}
+
+.el-notification--success {
+  border-left-color: #4AA17B !important;
+}
+
+.el-notification--warning {
+  border-left-color: var(--color-obx-gold) !important;
+}
+
+.el-notification--error {
+  border-left-color: #D95F55 !important;
+}
+
+/* Modal/Dialog */
+.el-dialog {
+  border-radius: 8px !important;
+  box-shadow: 0 8px 16px rgba(23, 33, 46, 0.2) !important;
+}
+
+.el-dialog__header {
+  background-color: var(--color-obx-dark-blue) !important;
+  color: var(--color-obx-white) !important;
+  padding: 20px !important;
+}
+
+.el-dialog__title {
+  color: var(--color-obx-white) !important;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Tooltips */
+.el-tooltip__popper {
+  background-color: var(--color-obx-dark-blue) !important;
+  color: var(--color-obx-white) !important;
+}
+
+.el-tooltip__popper .popper__arrow {
+  border-color: var(--color-obx-dark-blue) transparent !important;
+}
+
+/* Loading State */
+.el-loading-mask {
+  background-color: rgba(238, 243, 246, 0.9) !important;
+}
+
+/* Custom Branding Footer */
+body::after {
+  content: 'Powered by OBxFlow | OuterBox Internal Platform';
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  color: var(--color-obx-slate);
+  opacity: 0.7;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Environment Indicator */
+body::before {
+  content: 'DEVELOPMENT';
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-obx-gold);
+  color: var(--color-obx-dark-blue);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 10000;
+  letter-spacing: 0.5px;
+}
+
+/* Sprites/Decorative Elements */
+.workflow-header::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-obx-gold);
+}
+
+.workflow-header::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-obx-blue);
+}
+
+/* Custom ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-obx-frost);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-obx-slate);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-obx-blue);
+}
+
+/* Animation for Node Connections */
+@keyframes flow {
+  0% { stroke-dashoffset: 10; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.connection-line.running {
+  stroke-dasharray: 5;
+  animation: flow 0.5s linear infinite;
+}
