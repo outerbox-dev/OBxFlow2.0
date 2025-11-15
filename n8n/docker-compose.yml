@@ -40,6 +40,9 @@ services:
       - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER}
       - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD}
       
+      # Security Settings
+      - N8N_SECURE_COOKIE=${N8N_SECURE_COOKIE}
+      
       # Encryption
       - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
       
